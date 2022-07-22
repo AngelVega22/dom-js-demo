@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkCookies()">
+    <h1>HTML DOM</h1>
+    <img id="imagen" src="img/dom-tree.png" alt="" srcset="">
+
+    <ul>
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+
+    </ul>
+
+    <h1>Manipular el <em id="dom">elemento</em> por ID</h1>
+
+    <h1 class="borrado">Manipular el <em class="clase">elemento</em> por la clase</h1>
+
+    <button onclick="borrar()">Borrar texto</button>
+    <br>
+    <label>Escribe tu texto</label>
+    <input type="text" id="escribir">
+    <button type="button" onclick="escribir()">Ok</button>
+    <br>
+    <br>
+    <button onclick="cambiarImagen()">Cambiar imagen</button>
+
+    <h1 id="texto"></h1>
+
+    <h1>Validación</h1>
+    <input id="numb" type="number" placeholder=" 1 al 10">
+    <button type="button" onclick="validar()">Enviar</button>
+
+    <p id="demo"></p>
+
+
+    <h1>Eventos</h1>
+    <input type="text" id="minuscula" onchange="upperCase()">
+    <hr>
+    <p id="Cookies"></p>
+    <h1>Animaciones</h1>
+    <p><button onclick="animar()">Presionar</button></p>
+
+    <div id="container">
+        <div id="animate" onmouseover="mOver(this)" onmouseout="mOut(this)">
+            eventos
+        </div>
+    </div>
+
+
+
+    <h2>JavaScript addEventListener()</h2>
+
+
+
+    <button id="evento">EventListener</button>
+
+
+
+
+    <h3 id="Dom">Dom navigation</h3>
+    <code>document.getElementById("Dom").innerHTML = document.getElementById("Abajo").nodeName;
+    </code>
+    <p id="Abajo"></p>
+
+    <p id="remover">Remover</p>
+    <script src="app.js"></script>
+</body>
+
+</html>
