@@ -1,34 +1,37 @@
-// alert(document.querySelector('h1').textContent)
+//================================================================//
 
+//1 - querySelectorAll
+// alert(document.querySelector('h1').textContent)
 parrafos = document.querySelectorAll('li')
 
 for (let i = 0; i < parrafos.length; i++) {
     const element = parrafos[i];
     console.log(element.textContent)
 }
+//================================================================//
 
-
+//2- getElementById
 document.getElementById('dom').innerHTML = 'HTML'
 document.getElementById('dom').style.color = 'blue'
 document.getElementsByClassName('clase')[0].style.fontSize = '50px'
-
-
-
-function borrar() {
-    const collection = document.getElementsByClassName('borrado')[0];
-    collection.innerHTML = "";
-}
 
 function escribir() {
     const texto = document.getElementById('escribir').value
     document.getElementById('texto').innerHTML = texto
 }
-
-
 function cambiarImagen() {
     document.getElementById('imagen').src = "img/dom_tree.png"
 }
+//================================================================//
 
+//3- getElementByClassName
+function borrar() {
+    const collection = document.getElementsByClassName('borrado')[0];
+    collection.innerHTML = "";
+}
+//================================================================//
+
+//4- Validations
 function validar() {
 
     let x = document.getElementById("numb").value;
@@ -45,7 +48,9 @@ function upperCase() {
     const x = document.getElementById("minuscula");
     x.value = x.value.toUpperCase();
 }
+//================================================================//
 
+//5- Animations
 function animar() {
     let id = null;
     const elem = document.getElementById("animate");
@@ -73,7 +78,9 @@ function checkCookies() {
     }
     document.getElementById("Cookies").innerHTML = text;
 }
+//================================================================//
 
+// 6- Events
 function mOver(obj) {
     obj.style.color = "blue"
 }
@@ -81,6 +88,9 @@ function mOver(obj) {
 function mOut(obj) {
     obj.style.color = "red"
 }
+//================================================================//
+
+// 7- EventListener
 
 document.getElementById("evento").addEventListener("click", alerta);
 
@@ -107,4 +117,16 @@ div2.innerHTML = "<strong>Hola</strong>"
 body.append(div2)
 
 const remover = document.querySelector('#remover')
-//remover.remove()
+remover.remove()
+//================================================================//
+
+//8- AJAX
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+        document.getElementById("ajax").innerHTML =
+            this.responseText;
+    }
+    xhttp.open("GET", "ajax_info.txt");
+    xhttp.send();
+}

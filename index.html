@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="checkCookies()">
-    <h1>HTML DOM</h1>
+<body onload="checkCookies()" class="container">
+    <h1 class="text-center">JavaScript DOM manipulation</h1>
+    <br>
     <img id="imagen" src="img/dom-tree.png" alt="" srcset="">
 
     <ul>
@@ -73,6 +75,12 @@
     <p id="Abajo"></p>
 
     <p id="remover">Remover</p>
+
+
+    <div id="ajax">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
     <script src="app.js"></script>
 </body>
 
